@@ -30,3 +30,17 @@ rm -r webstacka # delete folder
 # certificate verify failed fixed
 ln -s /etc/ssl/* /Library/Frameworks/Python.framework/Versions/Current/etc/openssl/
 
+
+# GIT COMMANDS
+git branch <branch_name>   # To create another branch
+git checkout <branch_name>  # To move to another branch
+git branch  # To check current branch
+git stash # temporarily save your changes
+git stash apply  # apply stashed changes
+
+To rename a branch using Git Bash, you can follow these steps:
+
+Make sure you are on a different branch (not the one you want to rename).
+git branch -m <old_branch_name> <new_branch_name>
+git branch -D # delete a branch
+
