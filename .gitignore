@@ -1,0 +1,11 @@
+__pycache__/
+venv
+.env
+.dockerignore
+.DS_Store
+*.sqlite3
+email.json
+static
+notes.txt
+.DS_Store
+staticfiles

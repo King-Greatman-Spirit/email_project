@@ -1,0 +1,39 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <h1>Webstacka Email Form</h1>
+    <br/>
+    {% include 'includes/alerts.html' %}
+    <br>
+
+    <form method="POST" action="{% url 'send_email' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="form-group">
+        <h6><label for="id_email_title">Email Subject</label></h6>
+        <input type="text" class="form-control" id="id_email_title" name="email_subject" required>
+      </div>
+
+      <div class="form-group">
+          <h6><label for="id_email_content">Email Content</label></h6>
+          <textarea class="form-control" id="id_email_content" name="email_content" rows="6" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <h6><label for="id_email_attachment">Attachment</label></h6>
+        <input type="file" class="form-control-file" id="id_email_attachment" name="email_attachment" multiple>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Send Email</button>
+      <a href="{% url 'home' %}" class="btn btn-danger">Cancel</a>
+    </form>
+
+    <p class="footer">To go to the previous page 
+      <a href="{% url 'home' %}" class="blinking-button">Click here</a>
+    </p>
+    
+
+  </div>
+{% endblock %}
+
